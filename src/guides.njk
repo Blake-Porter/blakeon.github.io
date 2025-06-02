@@ -1,0 +1,15 @@
+---
+title: "All Travel Guides"
+layout: base.njk
+---
+
+<h1>All Travel Guides</h1>
+
+<ul>
+  {% for guide in collections.guide | reverse %}
+    <li>
+      <a href="{{ guide.url }}">{{ guide.data.title }}</a>
+      <p>{{ guide.data.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
